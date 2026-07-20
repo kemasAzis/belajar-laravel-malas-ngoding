@@ -16,23 +16,21 @@
     
     <table border="1">
         <tr>
-            <th>No</th>
             <th>Nama</th>
             <th>Jabatan</th>
             <th>Umur</th>
             <th>Alamat</th>
             <th>Aksi</th>
         </tr>
-        @foreach($pegawai as $data)
+        @foreach($pegawai as $p)
         <tr>
-            <td>{{ $data->pegawai_id }}</td>
-            <td>{{ $data->pegawai_nama }}</td>
-            <td>{{ $data->pegawai_jabatan }}</td>
-            <td>{{ $data->pegawai_umur }}</td>
-            <td>{{ $data->pegawai_alamat }}</td>
+            <td>{{ $p->pegawai_nama }}</td>
+            <td>{{ $p->pegawai_jabatan }}</td>
+            <td>{{ $p->pegawai_umur }}</td>
+            <td>{{ $p->pegawai_alamat }}</td>
             <td>
-                <a href="/pegawai/edit/{{ $data->pegawai_id }}">Edit</a> |
-                <a href="/pegawai/hapus/{{ $data->pegawai_id }}">Hapus</a>
+                <a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a> |
+                <a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
             </td>
         </tr>
         @endforeach
