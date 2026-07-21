@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
-    //mengambil data dari tabel pegawai
+    // mengambil data dari tabel pegawai
     public function index()
     {
         // mengambil data dari tabel pegawai
