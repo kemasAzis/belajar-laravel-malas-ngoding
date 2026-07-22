@@ -8,7 +8,7 @@ use App\Http\Controllers\BlogController;
 // improt controller rute 5
 use App\Http\Controllers\PegawaiController;
 // import controller rute 6
-use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\AnakBuahController;
 
 
 Route::get('/', function () {
@@ -40,6 +40,7 @@ Route::get('dosen', [DosenController::class, 'index']);
 // rute 5 Tulis rute dengan sintaks array
 // Route::get('/', [PegawaiController::class, 'index']);    
 Route::get('pegawai', [PegawaiController::class, 'index']);
+
 Route::post('pegawai/store', [PegawaiController::class, 'store']);
 
 Route::get('pegawai/tambah', [PegawaiController::class, 'tambah']);
@@ -50,5 +51,14 @@ Route::get('pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 
 Route::get('pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 
-// route 6 input data mahasiswa dari url
-Route::get('mahasiswa/{nama}', [MahasiswaController::class, 'index']);
+
+
+
+
+
+// belajar request data
+// route 6 input data dari url
+Route::get('AnakBuah/{nama}/{alamat}/{umur}', [AnakBuahController::class, 'AnakBuah']);
+// input data dari url dengan optional parameter
+Route::get('daftar',[AnakBuahController::class, 'daftar']);
+Route::get('daftar/proses',[AnakBuahController::class, 'proses']);
